@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from api.models import Player, Team, Game
-from api.serializers import UserSerializer, GroupSerializer, GameSerializer, TeamSerializer, PlayerSerializer
+from backend.api.models import Player, Team, Game
+from backend.api.serializers import UserSerializer, GroupSerializer, GameSerializer, TeamSerializer, PlayerSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):

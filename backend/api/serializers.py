@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
-from api.models import Team, Game, Player
-from rest_framework import  serializers
+from rest_framework import serializers
+
+from backend.api.models import Team, Player, Game
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
