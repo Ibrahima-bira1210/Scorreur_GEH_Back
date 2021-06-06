@@ -23,6 +23,9 @@ class TeamSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class PlayerSerializer(serializers.HyperlinkedModelSerializer):
+    team = serializers.ReadOnlyField(source="team.name")
+    team_id = serializers.IntegerField(write_only=True)
+
     class Meta:
         model = Player
         fields = '__all__'
